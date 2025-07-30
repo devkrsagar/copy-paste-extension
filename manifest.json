@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Form Clipboard Paster",
+  "version": "1.0",
+  "description": "Developed by WebiMatic Solutions – Paste clipboard JSON into form fields on any page.",
+  "author": "WebiMatic Solutions",
+  "permissions": [
+    "scripting",
+    "activeTab",
+    "clipboardRead"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
